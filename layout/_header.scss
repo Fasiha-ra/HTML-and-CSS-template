@@ -1,0 +1,52 @@
+@import 'mixin';
+@import 'variable';
+
+.header {
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    transition: $trans;
+
+    .head {
+        @include flex;
+        gap: 10px;
+        justify-content: space-between;
+
+        a:hover {
+            color: #ff0000;
+        }
+    }
+
+    .menu-detail {
+        display: none;
+        align-items: center;
+        gap: 21px;
+
+        @media screen and (min-width: 992px) {
+            display: flex;
+        }
+    }
+
+    .navbar ul,
+    .login {
+        display: flex;
+        gap: 30px;
+    }
+    .navbar{
+        padding-right: 145px;
+        margin: 14px;
+    }
+    .navbar a:hover {
+        color: rgb(226, 23, 162);
+        text-decoration: underline;
+    }
+}
+
+.menu {
+    display: block;
+
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+
+}

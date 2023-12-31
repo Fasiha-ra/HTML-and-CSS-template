@@ -1,0 +1,102 @@
+@import 'mixin';
+
+.banner {
+    background-color: #eff3f3;
+    @include flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media screen and (min-width: 992px) {
+        flex-direction: row;
+    }
+
+    .text-box {
+        padding: 10px;
+        margin: 25px;
+
+        p {
+            letter-spacing: normal;
+            line-height: 1.75;
+            font-size: 18px;
+            font-weight: 400;
+
+        }
+    }
+
+}
+
+.furniture-section {
+    margin: 25px auto;
+    padding: 10px;
+
+    p {
+        margin-bottom: 30px;
+        letter-spacing: normal;
+        line-height: 1.75;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .img-section {
+        display: grid;
+        column-gap: 50px;
+        grid-template-columns: auto;
+        background-color: #fff;
+        padding: 10px;
+        row-gap: 50px;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: auto auto;
+
+
+        }
+
+        @media screen and (min-width: 1200px) {
+            grid-template-columns: auto auto auto;
+
+        }
+
+        .img-box {
+            background-color: #eff3f3;
+            width: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px 0 #928989;
+            padding: 15px 15px 0;
+
+            img {
+                width: 300px;
+                height: 240px;
+                background-size: cover;
+                background-position: center center;
+                margin-top: 30px;
+            }
+
+            .price-detail {
+                @include flex;
+                justify-content: space-between;
+
+                .price {
+                    font-size: 16px;
+
+                    span {
+                        color: #808080;
+                    }
+
+                }
+
+                .buy {
+                    color: #808080;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+    }
+}
+
+.about-section {
+    margin-bottom: 30px;
+}
